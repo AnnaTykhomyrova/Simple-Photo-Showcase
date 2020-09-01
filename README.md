@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Simple Photo Showcase using [500px API](https://github.com/500px/legacy-api-documentation)
 
-## Available Scripts
+## Description 
 
-In the project directory, you can run:
+Web app showcases Popular photos from 500px. It shows photos in “Popular” feature dynamically obtained from the 500px API. The list supports pagination and allows users to browse through multiple pages of content.
 
-### `npm start`
+When user clicks on a photo on the grid, a full screen version of the photo displays along with the more detailed information about the photo, such as its title and description.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Final product
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Photo Showcase page. Top pagination.
+!["Screenshot of top photo showcase page."](https://github.com/AnnaTykhomyrova/Simple-Photo-Showcase/blob/master/docs/photo-showcase-top-page.png)
 
-### `npm test`
+#### Photo Showcase page. Bottom pagination.
+!["Screenshot of bottom photo showcase page."](https://github.com/AnnaTykhomyrova/Simple-Photo-Showcase/blob/master/docs/photo-showcase-bottom-page.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Photo Showcase. Details page. 
+!["Screenshot of photo showcase details page."](https://github.com/AnnaTykhomyrova/Simple-Photo-Showcase/blob/master/docs/photo-showcase-details-page.png)
 
-### `npm run build`
+## Tech Stack
+- Express
+- Node
+- React
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1) Flexible lightbox component  [React Image Lightbox](https://www.npmjs.com/package/react-image-lightbox) has been used to display images in this React project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It has features listed below:
+- Keyboard shortcuts (with rate limiting)
+- Image Zoom
+- Flexible rendering using src values assigned on the fly
+- Image preloading for smoother viewing
+- Mobile friendly, with pinch to zoom and swipe
+- No external CSS
 
-### `npm run eject`
+2) Pagination functionality was implemented with custom class component. 
+One component was used at the top of the page and the second one was used at the bottom of the page.
+They are also synchronized with each other.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+3) For runtime type checking was used [prop-types](https://www.npmjs.com/package/prop-types).
+PropTypes is a library that helps in minimizing data types problem in React by checking the types passed in the props object against a specification that was set beforehand and to raise a warning if the types passed don't match the types expected.
