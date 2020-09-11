@@ -4,7 +4,7 @@ import Lightbox from '@zhyabs1314/react-image-lightbox';
 import '@zhyabs1314/react-image-lightbox/style.css'; 
 import Pagination from '../components/Pagination.jsx';
 
-export default class AllProjects extends Component { 
+export default class PhotoShowcase extends Component { 
     constructor(props) {
         super(props);
         this.state = {
